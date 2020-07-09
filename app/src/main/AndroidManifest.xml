@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".book_quiz"></activity>
+        <activity android:name=".book_final"></activity>
+        <activity android:name=".final_screen_book" />
+        <activity android:name=".book_quiz" />
         <activity android:name=".Final_screen" />
         <activity android:name=".python" />
         <activity android:name=".Category" />

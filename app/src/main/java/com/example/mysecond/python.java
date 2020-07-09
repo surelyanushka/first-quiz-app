@@ -31,7 +31,10 @@ public class python extends AppCompatActivity {
     //int TheRandom;
     int i = 0;
     //int array[] = new int[no_of_q];
-
+    public void onBackPressed(){
+        Intent intent = new Intent(python.this, Category.class);
+        startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

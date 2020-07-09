@@ -24,7 +24,7 @@ public class Category extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-//Anushka Tawte
+
         Category2 = findViewById(R.id.category2);
         Category2.setOnClickListener(new View.OnClickListener() {
             @Override

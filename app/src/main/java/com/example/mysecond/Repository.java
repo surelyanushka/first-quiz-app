@@ -53,7 +53,7 @@ public class Repository {
         String option = options[i][3];
         return option;
     }
-    //Anushka Tawte
+
     public String get_correct_ans(int i){
         String answer = correct_ans[i];
         return answer;

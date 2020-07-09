@@ -25,12 +25,17 @@ public class book_quiz extends AppCompatActivity {
     private BookRepo question_set = new BookRepo();
 
     private String ans;
-    public static int current_score;
+    public static int currentt_score;
     private int no_of_q = question_set.question_set.length;
     Random rand_num;
     //int TheRandom;
     int i = 0;
     //int array[] = new int[no_of_q];
+
+    public void onBackPressed(){
+        Intent intent = new Intent(book_quiz.this, Category.class);
+        startActivity(intent);
+    }
 
 
     @Override
@@ -38,7 +43,8 @@ public class book_quiz extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_quiz);
 
-        rand_num = new Random();
+
+        //rand_num = new Random();
 
         option1 = (Button) findViewById(R.id.btn1);
         option2 = (Button) findViewById(R.id.btn2);
@@ -48,11 +54,11 @@ public class book_quiz extends AppCompatActivity {
         score = (TextView) findViewById(R.id.your_score);
         question = (TextView) findViewById(R.id.Question_view);
 
-        current_score =  0;
+        currentt_score =  0;
 
-        String y = "Score: " + current_score ;
+        String z = "Score: " + currentt_score ;
 
-        score.setText(y);
+        score.setText(z);
         //TheRandom = rand_num.nextInt(no_of_q);
 
         updateQuestion(i=0);
@@ -63,9 +69,9 @@ public class book_quiz extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(option1.getText().toString() == ans ){
-                    current_score++;
+                    currentt_score++;
                     //option1.setBackgroundColor(Color.parseColor("#ADFF2F"));
-                    score.setText("Score: " + current_score);
+                    score.setText("Score: " + currentt_score);
                     //updateRandomNo(array);
                     //updateQuestion(rand_num.nextInt(no_of_q));
                     i = i + 1;
@@ -73,7 +79,7 @@ public class book_quiz extends AppCompatActivity {
                         updateQuestion(i);
                     }
                     else{
-                        Intent intent = new Intent(book_quiz.this, Final_screen.class);
+                        Intent intent = new Intent(book_quiz.this, book_final.class);
                         startActivity(intent);
                     }
                 }
@@ -81,7 +87,7 @@ public class book_quiz extends AppCompatActivity {
                 {
                     //option1.setBackgroundColor(Color.parseColor("#CD5C5C"));
 
-                    Intent intent = new Intent(book_quiz    .this, Final_screen.class);
+                    Intent intent = new Intent(book_quiz.this, book_final.class);
                     startActivity(intent);
 
                 }
@@ -91,9 +97,9 @@ public class book_quiz extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(option2.getText().toString() == ans ){
-                    current_score++;
+                    currentt_score++;
                     //option2.setBackgroundColor(Color.parseColor("#ADFF2F"));
-                    score.setText("Score: " + current_score);
+                    score.setText("Score: " + currentt_score);
                     //updateQuestion(rand_num.nextInt(no_of_q));
                     //updateRandomNo(array);
                     i = i + 1;
@@ -101,7 +107,7 @@ public class book_quiz extends AppCompatActivity {
                         updateQuestion(i);
                     }
                     else {
-                        Intent intent = new Intent(book_quiz.this, Final_screen.class);
+                        Intent intent = new Intent(book_quiz.this, book_final.class);
                         startActivity(intent);
                     }
                 }
@@ -109,7 +115,7 @@ public class book_quiz extends AppCompatActivity {
                 {
                     //option2.setBackgroundColor(Color.parseColor("#CD5C5C"));
 
-                    Intent intent = new Intent(book_quiz.this, Final_screen.class);
+                    Intent intent = new Intent(book_quiz.this, book_final.class);
                     startActivity(intent);
 
                 }
@@ -120,9 +126,9 @@ public class book_quiz extends AppCompatActivity {
             public void onClick(View view) {
 
                 if(option3.getText().toString() == ans ){
-                    current_score++;
+                    currentt_score++;
                     //option3.setBackgroundColor(Color.parseColor("#ADFF2F"));
-                    score.setText("Score: " + current_score);
+                    score.setText("Score: " + currentt_score);
                     //updateRandomNo(array);
                     //updateQuestion(rand_num.nextInt(no_of_q));
                     i = i + 1;
@@ -130,13 +136,13 @@ public class book_quiz extends AppCompatActivity {
                         updateQuestion(i);
                     }
                     else{
-                        Intent intent = new Intent(book_quiz.this, Final_screen.class);
+                        Intent intent = new Intent(book_quiz.this, book_final.class);
                         startActivity(intent);
                     }
                 }
                 else
                 {
-                    Intent intent = new Intent(book_quiz.this, Final_screen.class);
+                    Intent intent = new Intent(book_quiz.this, book_final.class);
                     startActivity(intent);
                 }
 
@@ -147,9 +153,9 @@ public class book_quiz extends AppCompatActivity {
             public void onClick(View view) {
 
                 if(option4.getText().toString() == ans ){
-                    current_score++;
+                    currentt_score++;
                     //option4.setBackgroundColor(Color.parseColor("#ADFF2F"));
-                    score.setText("Score: " + current_score);
+                    score.setText("Score: " + currentt_score);
                     // updateQuestion(rand_num.nextInt(no_of_q));
                     //updateRandomNo(array);
                     i = i + 1;
@@ -157,7 +163,7 @@ public class book_quiz extends AppCompatActivity {
                         updateQuestion(i);
                     }
                     else{
-                        Intent intent = new Intent(book_quiz.this, Final_screen.class);
+                        Intent intent = new Intent(book_quiz.this, book_final.class);
                         startActivity(intent);
                     }
                 }
@@ -165,7 +171,7 @@ public class book_quiz extends AppCompatActivity {
                 {
                     //option4.setBackgroundColor(Color.parseColor("#CD5C5C"));
                     //game_over();
-                    Intent intent = new Intent(book_quiz.this, Final_screen.class);
+                    Intent intent = new Intent(book_quiz.this, book_final.class);
                     startActivity(intent);
                 }
             }
@@ -183,7 +189,7 @@ public class book_quiz extends AppCompatActivity {
         ans = question_set.get_correct_ans(num);
     }
 
-    public static int get_score(){
-        return current_score;
+    public static int get_scores(){
+        return currentt_score;
     }
 }
