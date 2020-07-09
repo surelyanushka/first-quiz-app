@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".MainActivity"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/Quiz_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:text="Quiz :)"
+        android:textSize="70sp" />
+
+    <Button
+        android:id="@+id/play_btn"
+        android:layout_below="@+id/Quiz_app"
+        android:gravity="center"
+        android:layout_margin="50dp"
+        android:layout_width="match_parent"
+        android:textSize="20dp"
+        android:text="Let's Play!"
+        android:background="@drawable/round_buttons"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>
