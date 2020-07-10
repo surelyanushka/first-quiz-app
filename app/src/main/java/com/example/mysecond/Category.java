@@ -9,6 +9,11 @@ import android.widget.Button;
 
 public class Category extends AppCompatActivity {
 
+    public void onBackPressed(){
+        Intent intent = new Intent(Category.this, MainActivity.class);
+        startActivity(intent);
+    }
+
     private Button Category1;
     private Button Category2;
     @Override

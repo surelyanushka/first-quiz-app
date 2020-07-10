@@ -9,6 +9,13 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    public void onBackPressed(){
+        finish();
+        System.exit(0);
+    }
+
+
     private Button Play;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
